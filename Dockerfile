@@ -10,7 +10,7 @@ RUN  apt-get update && \
 	
 RUN apt install qemu-system qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager -y 
 
-WOKRDIR /root
+WORKDIR /root
  
 RUN  qemu-img create -f qcow2 Bliss14.qcow2 20G	
 
