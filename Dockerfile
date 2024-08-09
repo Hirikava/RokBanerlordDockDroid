@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM systemd-ubuntu:latest
 
 USER root
 
@@ -20,6 +20,7 @@ python3 -m venv .venv && \
 . .venv/bin/activate && \
 pip install gdown && \
 gdown --fuzzy -O bliss.iso https://drive.google.com/file/d/1gewUmKIIzyiE-mV_5YBem8-CTIRI7nvt/view?usp=drive_link && \
+gdown --fuzzy -O OVMF.fd https://drive.google.com/file/d/1Yb_bqhzI2NPh7X-8au4DJzlWxiMJ3Fcp/view?usp=sharing && \
 deactivate
 	
 RUN apt install qemu-system qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager -y 
