@@ -1,4 +1,4 @@
-FROM systemd-ubuntu:latest
+FROM jrei/systemd-ubuntu:latest
 
 USER root
 
