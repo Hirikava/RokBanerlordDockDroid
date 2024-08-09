@@ -14,7 +14,7 @@ RUN apt-get update
 RUN apt-get install -y systemd systemd-sysv dbus dbus-user-session
 RUN printf "systemctl start systemd-logind" >> /etc/profile
 
-apt install python3 python3-pip python3-venv -y && \
+RUN apt install python3 python3-pip python3-venv -y && \
 apt-get install g++ -y && \
 python3 -m venv .venv && \
 source .venv/bin/activate && \
