@@ -17,7 +17,7 @@ RUN printf "systemctl start systemd-logind" >> /etc/profile
 RUN apt install python3 python3-pip python3-venv -y && \
 apt-get install g++ -y && \
 python3 -m venv .venv && \
-source .venv/bin/activate && \
+. .venv/bin/activate && \
 pip install gdown && \
 gdown --fuzzy -O bliss.iso https://drive.google.com/file/d/1gewUmKIIzyiE-mV_5YBem8-CTIRI7nvt/view?usp=drive_link && \
 deactivate
